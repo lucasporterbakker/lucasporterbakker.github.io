@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>THE DARE</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tabs.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+  <style>
+  @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Josefin+Sans:400,600,700,400italic,600italic);
+
+  body{
+   font-family: 'josefin sans';
+   font-size: 16px;
+   margin: 0;
+ }
+
+ .hero{
+   height: 100vh;
+   width: 100%;
+   position: fixed;
+   top: 0;
+   z-index: 9;
+   transition: all 1.6s cubic-bezier(0.86, 0, 0.07, 1);
+ }
+ .hero.scrolled{
+   transform: translate3d(0, -100%, 0) scale(.75);
+   opacity: 0;
+ }
+
+ .hero-inner{
+  background-image: linear-gradient(-225deg, rgba(0, 101, 168, 0.6) 0%, rgba(0, 36, 61, 0.6) 50%), url(images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  display: table;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+.hero-title{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/*.hero-title img {
+  padding-top: 50px;
+  }*/
+
+  h1, h2, h3, h4, h5, h6{
+   font-family: montserrat;
+ }
+ .font-2{
+   font-family: 'josefin sans';
+   font-weight: 500;
+ }
+ .title{ letter-spacing: .3em; text-transform: uppercase; }
+ .text-light{ color: #fff }
+ .font-alt{
+   font-family: 'georgia';
+   font-style: italic;
+   color: #666;
+ }
+ .hero{
+   overflow: hidden;
+   z-index: 1;
+ }
+ .content{
+   position: relative;
+   background-color: #fff;
+   border-top: 10px solid black;
+   padding: 0;
+   margin: 0;
+   transition: all 1.6s cubic-bezier(0.86, 0, 0.07, 1);
+   transform: translate3d(0, 20px, 0) scale(.75);
+   opacity: 0;
+ }
+ .content.scrolled{
+   transform: translate3d(0, 0, 0) scale(1);
+   opacity: 1;
+ }
+ .sd{
+   color: #fff;
+   position: absolute;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+ }
+ .sd:hover, .sd:focus{
+   color: #fff;
+   opacity: .7;
+   text-decoration: none;
+ }
+
+ .footer-copyright {
+  text-align: center !important;
+  margin: 0;
+}
+
+.footer {
+  background: #070707 !important;
+  /*display: flex;*/
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: space-between;
+  height: auto;
+  padding: 100px 50px;
+  /*color: rgba(0,0,0,0.3);*/
+  color: #FFFFFF;
+  margin: 0;
+}
+.footer-links {
+  /*display: flex;*/
+  text-align: center;
+  /*padding: 15px;*/
+  align-items: center;
+}
+.footer-links a {
+  color: #FFFFFF;
+  /*padding: 25px;*/
+  opacity: 0.85;
+  text-decoration: none;
+  text-align: center;
+  font-size: 24px;
+  padding: 25px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+  color: #FDCD2F;
+}
+.footer .fa-heart {
+  color: #D23333;
+}
+
+.footer i {
+  padding-bottom: 50px;
+}
+
+.avatar-large {
+  width: 100px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.footer p{
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+/*.cast body {
+  margin-top: 50px;
+  }*/
+
+  .cast {
+    background: #070707 !important;
+    display: flex;
+    height: 100px;
+    padding: 150px 70px;
+    /*color: rgba(0,0,0,0.3);*/
+    color: #FFFFFF;
+    top: 25;
+  }
+
+  .cast-title {
+    text-transform: uppercase;
+  }
+
+  .cast-links {
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+  .cast-links a {
+    color: #FFFFFF;
+    opacity: 0.85;
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+    padding: 0px 10px;
+  }
+  .cast-links a:hover {
+    opacity: 1;
+    color: #FDCD2F;
+  }
+
+  .cast-copyright {
+    text-align: center !important;
+    margin: 0;
+  }
+
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <div class="hero">
+   <div class="hero-inner">
+     <div class="hero-title">
+
+      <h1 class="text-light title font-2">THE DARE</h1>
+      <p class="text-light">It's all about the journey.</p>
+
+      <br>
+      <br>
+      <br>
+
+      <img src="images/ans.png" alt="artsnovascotia" width="100" style="padding: 10 px">
+      <img src="images/nfb.png" alt="nationalfilmboard" width="100" style="padding: 10 px">
+
+    </div>
+    <a href="#" class="sd"><i class="fas fa-angle-down" style="font-size: 30px"></i></a>
+  </div>
+</div>
+<div class="content clearfix">
+	<div class="container" style="padding-top: 60px">
+		<div class="row">
+			<div class="col-md-6">
+				<h2 class="text-uppercase">THE DARE</h2>
+				<p class="font-alt">A son is challenged by his father to complete a solo trip through India.</p>
+        <p>8 minutes; 30 seconds</p>
+        <p> <img src="images/poster.png" alt="" width="150"></p>
+      </div>
+      <div class="col-md-6">
+        <p style="padding-top: 47px">
+
+          An experimental hybrid fiction of a real journey; road movie meets documentary.
+
+          Shot in India on a Canon 5D. Using a stills camera as a video camera, we set up shots in the streets using the real world as our setting.
+
+          Porter wanted to capture India’s beauty and surge of life. He was looking for the sensory experience of an outsider travelling through another land and responding visually to the intensity and movement of India.
+
+          Porter has four children and on their eighteenth birthdays has taken them somewhere in the world to encounter themselves. These are challenging and off-the-beaten path journeys. Coming of age trips. His intention being to help them see beyond the comfort and privilege of their North American world. For each of them, these trips have been life changing experiences.
+
+          The film is about him and them. It is an outsider film about a young man moving through a world that is not his. It is about him being stripped of his comfort zone, losing ego and confidence, until he becomes unafraid and can finally glimpse himself and those around him.
+
+        </p>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://vimeo.com/307119276" target="blank_"><i class="fab fa-vimeo"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="footer-copyright">
+      <!-- Made with <i class="fas fa-heart"></i> -->
+      <p>THE DARE © 2019</p>
+      <p>Side Road Productions</p>
+    </div>
+  </div>
+  <!--  <div class="container" style="height: 40vh"></div> -->
+
+</div>
+
+
+
+
+<!-- <div class="bios">
+  <img src="images/christopher.jpg" class="avatar-large"/>
+  <p>Porter is a cinematographer, fine arts photographer, filmmaker, and writer based in Nova Scotia, Canada. As lighting director, credits include:  Coffee and Cigarettes, Down by Law, Brokeback Mountain, The Shipping News, Breaking the Waves, Kids and has worked with Jim Jarmush, Wim Wenders, Lars Von Trier, Stephen Frears, Lasse Halstrom, Sally Potter, and DOPs Robbie Mueller, Chris Menges, Oliver Stapleton, Luciano Tovoli… to name a few. His feature credits as DOP include The Disappeared, Relative Happiness,  Roller Town, and Just Buried. He has produced and shot three shorts, including Zed Crew, which was officially invited to Cannes. His short, The Dare, was shot solo in India with his son.</p>
+</div> -->
+<!-- <img src="images/shandi.jpg" class="avatar-large"/>
+<br>
+<img src="images/lucas2.jpg" class="avatar-large"/> -->
+
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='http://achtungthemes.com/gnoli/js/lib/scripts.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.0/SmoothScroll.min.js'></script>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
